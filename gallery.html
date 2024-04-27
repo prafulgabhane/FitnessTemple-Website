@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Temple - Gallery</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your custom stylesheet -->
+    <style>
+        /* Gallery grid with 2x2 layout */
+        .gallery {
+            display: flex;
+            flex-direction: row; /* Horizontal layout */
+            flex-wrap: wrap; /* Allows images to wrap to the next line */
+            justify-content: center; /* Centers the images horizontally */
+            gap: 30px; /* Space between images */
+            padding: 20px; /* Padding around the gallery */
+        }
+
+        .gallery img {
+            width: 300px; /* Larger size for the images */
+            height: 200px; /* Fixed height */
+            border-radius: 10px; /* Rounded corners */
+            border: 2px solid #ccc; /* Border for styling */
+            transition: all 0.3s; /* Smooth transitions */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1); /* Slight zoom effect on hover */
+            border-color: #555; /* Change border color on hover */
+        }
+
+        /* Styles for the lightbox/modal effect */
+        .lightbox {
+            display: none; /* Hide by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+        }
+
+        .lightbox img {
+            max-width: 80%; /* Restrict width to 80% of the screen */
+            max-height: 80%; /* Restrict height to 80% of the screen */
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px; /* Positioning for the close button */
+            right: 20px; /* Positioning for the close button */
+            font-size: 30px; /* Font size for the close button */
+            color: white; /* White color for visibility */
+            cursor: pointer; /* Changes cursor to a pointer */
+        }
+
+        /* Centering the heading */
+        .centered {
+            text-align: center; /* Center-align text horizontally */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness Temple - Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a> <!-- Home link -->
+        <a href="about.html">About Us</a> <!-- About Us link -->
+        <a href="gallery.html">Gallery</a> <!-- Gallery link -->
+        <a href="contact.html">Contact Us</a> <!-- Contact Us link -->
+        <a href="feedback.html">Feedback</a> <!-- Feedback link -->
+        <a href="login.php">Admin Login</a> <!-- Admin login link -->
+    </nav>
+
+    <main>
+        <h2 class="centered">Our Gym Gallery</h2> <!-- Centered heading -->
+        <div class="gallery">
+            <!-- First row -->
+            <img src="images/gym1.jpg" alt="Gym 1" onclick="openLightbox(this)">
+            <img src="images/gym2.jpg" alt="Gym 2" onclick="openLightbox(this)">
+
+            <!-- Second row -->
+            <img src="images/gym3.jpg" alt="Gym 3" onclick="openLightbox(this)">
+            <img src="images/gym4.jpg" alt="Gym 4" onclick="openLightbox(this)">
+        </div>
+    </main>
+
+    <!-- Lightbox/Modal for viewing larger images -->
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImage" src="">
+    </div>
+
+    <footer>
+        &copy; 2024 Fitness Temple. All rights reserved.
+    </footer>
+
+    <!-- JavaScript for Lightbox Functionality -->
+    <script>
+    function openLightbox(image) {
+        var lightbox = document.getElementById("lightbox");
+        var lightboxImage = document.getElementById("lightboxImage");
+
+        lightboxImage.src = image.src; // Set the lightbox image to the clicked image
+        lightbox.style.display = "flex"; // Display the lightbox
+    }
+
+    function closeLightbox() {
+        var lightbox = document.getElementById("lightbox");
+
+        lightbox.style.display = "none"; // Hide the lightbox
+    }
+    </script>
+</body>
+</html>

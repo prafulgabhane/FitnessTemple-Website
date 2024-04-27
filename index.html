@@ -4,28 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <title>Fitness Temple - Home</title>
+    <!-- Link to the external stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Header section with centered text -->
     <header>
-        <h1>Fitness Temple</h1>
+        <h1>Fitness Temple</h1> <!-- Main heading -->
     </header>
 
+    <!-- Navigation with links -->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="feedback.html">Feedback</a>
+        <a href="index.html">Home</a> <!-- Home link -->
+        <a href="about.html">About Us</a> <!-- About Us link -->
+        <a href="gallery.html">Gallery</a> <!-- Gallery link -->
+        <a href="contact.html">Contact Us</a> <!-- Contact Us link -->
+        <a href="feedback.html">Feedback</a> <!-- Feedback link -->
+        <a href="login.php">Admin Login</a> <!-- Admin login link -->
     </nav>
 
+    <!-- Main content section -->
     <main>
-        <h2>Welcome to Fitness Temple!</h2>
-        <p>Your journey to a healthier life starts here. We offer a wide range of fitness equipment, classes, and personal training.</p>
-        <img src="images/gym.png" alt="Gym Image" width="300">
+        <h2>Welcome to Fitness Temple!</h2> <!-- Main section heading -->
+        <p>
+            Your journey to a healthier life starts here. We offer a wide range of fitness equipment, classes, and personal training sessions.
+            Get in shape, stay healthy, and meet your fitness goals with us.
+        </p>
+        
+        <!-- Centered image section -->
+        <div class="centered-image"> 
+            <img src="images/screenshot.png" alt="Gym Image" style="max-width: 100%; height: auto;">
+        </div>
+        
+        <!-- Gym Packages Section with Three-Column Grid -->
+        <h3>Our Gym Packages</h3> <!-- Section heading -->
+        <div class="package-grid"> <!-- Grid layout for gym packages -->
+            <!-- Basic package -->
+            <div class="package">
+                <h3>Basic Package</h3>
+                <p>Access to all gym equipment, one group class per week.</p>
+                <p>Price: ₹499/month</p>
+            </div>
+            
+            <!-- Standard package -->
+            <div class="package">
+                <h3>Standard Package</h3>
+                <p>Access to all gym equipment, unlimited group classes, and one personal training session per month.</p>
+                <p>Price: ₹799/month</p>
+            </div>
+            
+            <!-- Premium package -->
+            <div class="package">
+                <h3>Premium Package</h3>
+                <p>All standard package features, plus unlimited personal training sessions and a free diet plan.</p>
+                <p>Price: ₹999/month</p>
+            </div>
+        </div>
+        
+        <!-- Additional images section -->
+        <div class="additional-images">
+            <img src="images/gym.png" alt="Gym Image" width="500">
+            <img src="images/yoga.png" alt="Yoga Image" width="400">
+        </div>
+
     </main>
 
+    <!-- Footer section with centered text -->
     <footer>
-        &copy; 2024 Fitness Temple
+        &copy; 2024 Fitness Temple. All rights reserved.
     </footer>
 </body>
 </html>

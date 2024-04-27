@@ -1,0 +1,76 @@
+/* General styles for the entire website */
+body {
+    font-family: 'Arial', sans-serif; /* Arial font for a clean look */
+    background-color: #f5f5f5; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    padding: 20px; /* Padding for spacing */
+    text-align: center; /* Center-align the text */
+}
+
+/* Navigation styling with Flexbox */
+nav {
+    background-color: #444; /* Dark background for the navigation bar */
+    padding: 10px; /* Padding for spacing */
+    display: flex; /* Flexbox for flexible layout */
+    justify-content: center; /* Center the links horizontally */
+}
+
+/* Navigation links with hover effects */
+nav a {
+    color: white; /* White text */
+    text-decoration: none; /* No underlines */
+    padding: 12px 25px; /* Padding for spacing */
+    margin: 0 10px; /* Space between links */
+    display: inline-block; /* Horizontal layout */
+    transition: background-color 0.3s, border-radius 0.3s; /* Smooth transition for hover effects */
+}
+
+nav a:hover {
+    background-color: #555; /* Darker background on hover */
+    border-radius: 10px; /* More pronounced rounded corners on hover */
+}
+
+/* Main content styling */
+main {
+    padding: 20px; /* Padding for the main content */
+    text-align: left; /* Align text to the left */
+}
+
+/* Flexbox layout for Packages section */
+.packages {
+    display: flex; /* Flexbox for even distribution */
+    justify-content: space-around; /* Even space around the packages */
+    margin-top: 20px; /* Top margin */
+}
+
+/* Grid layout for Gym Packages */
+.package-grid {
+    display: grid; /* CSS Grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Individual package styling */
+.package {
+    border: 1px solid #ccc; /* Border around each package */
+    padding: 15px; /* Padding inside the package */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center-align text */
+    background-color: white; /* White background */
+}
+
+/* Footer styling */
+footer {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    text-align: center; /* Center-align the text */
+    padding: 10px; /* Padding */
+    position: relative; /* Relative positioning */
+}
